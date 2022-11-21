@@ -23,16 +23,21 @@ body {
 	width: 500px;
 	border-radius: 5%;
 	border: dotted 5px rgb(0, 0, 0);
-	background-color: rgba(255, 255, 255, 0.874);
+	/* background-color: rgba(255, 255, 255, 0.874); */
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 0.8) 25%,
+		rgba(221, 155, 194, 0.4),
+		rgb(157, 194, 241)
+	);
 	display: grid;
-	grid-template-rows: 36px 22px 22px 22px;
-	gap: 10px;
 	justify-content: center;
 }
 
 button {
 	height: 28px;
 	width: 150px;
+	padding: 4px;
 	margin: 2px;
 	border-color: rgb(236, 9, 157);
 	font-size: 20px;
@@ -40,7 +45,7 @@ button {
 	background-color: #ffff;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-content: center;
 }
 
 .choiceP {
