@@ -13,6 +13,8 @@
 			src="https://kit.fontawesome.com/358d01b5d7.js"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://unpkg.com/feather-icons"></script>
+		<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
 	</head>
 	<body>
 		<nav class="navbar">
@@ -292,7 +294,14 @@
 			<button class="error">show error</button>
 			<button class="default">show default</button>
 		</div>
-
+		<div class="modal-container">
+			<div class="modal">
+				<p class="modal-title"></p>
+			</div>
+		</div>
 		<script src="script.js"></script>
+		<script>
+			feather.replace();
+		</script>
 	</body>
 </html>
