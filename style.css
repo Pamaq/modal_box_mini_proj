@@ -124,7 +124,9 @@ h1 {
 	align-items: center;
 	flex-direction: column;
 }
-button {
+button.warning,
+.error,
+.default {
 	height: 28px;
 	width: 150px;
 	margin: 5px;
@@ -141,4 +143,48 @@ button {
 .choiceP {
 	height: 36px;
 	font-size: 2rem;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2px solid rgb(236, 9, 157);
+	border-radius: 10px;
+	z-index: 10;
+	background-color: white;
+	width: 500px;
+	max-width: 60%;
+}
+.modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgb(236, 9, 157);
+}
+.modal-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+.modal-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.modal-body {
+	padding: 10px;
+}
+#overlay {
+	position: fixed;
+	/* opacity: 0; */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(236, 9, 156, 0.408);
 }
