@@ -1,8 +1,4 @@
 :root {
-	--warning: rgb(219, 165, 72);
-	--info: rgb(50, 148, 213);
-	--danger: rgb(224, 52, 52);
-	--success: rgb(55, 237, 27);
 	--text-primary: #393434;
 	--text-secondary: #ececec;
 	--bg-base: rgb(161, 197, 238);
@@ -149,13 +145,17 @@ button.warning,
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
 	border: 2px solid rgb(236, 9, 157);
 	border-radius: 10px;
 	z-index: 10;
 	background-color: white;
 	width: 500px;
 	max-width: 60%;
+}
+.modal.active {
+	transform: translate(-50%, -50%) scale(1);
 }
 .modal-header {
 	padding: 10px 15px;
@@ -181,10 +181,16 @@ button.warning,
 }
 #overlay {
 	position: fixed;
-	/* opacity: 0; */
+	opacity: 0;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(236, 9, 156, 0.408);
+	background-color: rgba(236, 9, 156, 0.408);
+	pointer-events: none;
+	transition: 200ms ease-in-out;
+}
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
 }
