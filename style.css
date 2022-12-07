@@ -141,7 +141,7 @@ button.warning,
 	font-size: 2rem;
 }
 
-.modal {
+.modal, .modal2 {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -154,21 +154,21 @@ button.warning,
 	width: 500px;
 	max-width: 60%;
 }
-.modal.active {
+.modal.active, .modal2.active {
 	transform: translate(-50%, -50%) scale(1);
 }
-.modal-header {
+.modal-header, .modal-header2 {
 	padding: 10px 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid rgb(236, 9, 157);
 }
-.modal-header .title {
+.modal-header .title, .modal-header2 .title2 {
 	font-size: 1.25rem;
 	font-weight: bold;
 }
-.modal-header .close-button {
+.modal-header .close-button, .modal-header2 .close-button2  {
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -176,7 +176,7 @@ button.warning,
 	font-size: 2rem;
 	font-weight: bold;
 }
-.modal-body {
+.modal-body, .modal-body2 {
 	padding: 10px;
 }
 #overlay {
