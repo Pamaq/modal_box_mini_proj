@@ -33,6 +33,9 @@ function closeModal(modal) {
 	overlay.classList.remove("active");
 }
 
+
+
+
 openModalButtons2.forEach((button2) => {
 	button2.addEventListener("click", () => {
 		const modal2 = document.querySelector(button2.dataset.modalTarget);
@@ -48,7 +51,7 @@ overlay.addEventListener("click", () => {
 closeModalButtons2.forEach((button2) => {
 	button2.addEventListener("click", () => {
 		const modal2 = button2.closest(".modal2");
-		closeModal(modal2);
+		closeModal2(modal2);
 	});
 });
 function openModal2(modal2) {

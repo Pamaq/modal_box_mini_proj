@@ -40,6 +40,7 @@ h1 {
 .text {
 	margin-top: 2rem;
 	width: 50vw;
+	margin-right: 2rem;
 }
 .navbar {
 	width: 5rem;
@@ -105,7 +106,7 @@ h1 {
 .frame {
 	margin-top: 5rem;
 	height: 170px;
-	width: 500px;
+	min-width: 250px;
 	border-radius: 5%;
 	border: dotted 5px rgb(0, 0, 0);
 	/* background-color: rgba(255, 255, 255, 0.874); */
@@ -116,10 +117,11 @@ h1 {
 		rgb(157, 194, 241)
 	);
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	box-shadow:rgb(236, 9, 157) 0px 5px 10px;
 }
+
 button.warning,
 .error,
 .default {
@@ -130,10 +132,11 @@ button.warning,
 	font-family: "VT323", monospace;
 	font-size: 1.5rem;
 	background-color: #ffff;
-	display: flex;
 	justify-content: center;
-	align-items: center;
-	vertical-align: middle;
+}
+button:hover {
+	cursor:pointer;
+	box-shadow:rgb(236, 9, 157) 0px 5px 10px;
 }
 
 .choiceP {
