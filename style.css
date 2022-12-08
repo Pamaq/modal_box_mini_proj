@@ -119,7 +119,7 @@ h1 {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	box-shadow:rgb(236, 9, 157) 0px 5px 10px;
+	box-shadow: rgb(236, 9, 157) 0px 5px 10px;
 }
 
 button.warning,
@@ -135,8 +135,8 @@ button.warning,
 	justify-content: center;
 }
 button:hover {
-	cursor:pointer;
-	box-shadow:rgb(236, 9, 157) 0px 5px 10px;
+	cursor: pointer;
+	box-shadow: rgb(236, 9, 157) 0px 5px 10px;
 }
 
 .choiceP {
@@ -144,7 +144,8 @@ button:hover {
 	font-size: 2rem;
 }
 
-.modal, .modal2 {
+.modal,
+.modal2 {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -157,21 +158,25 @@ button:hover {
 	width: 500px;
 	max-width: 60%;
 }
-.modal.active, .modal2.active {
+.modal.active,
+.modal2.active {
 	transform: translate(-50%, -50%) scale(1);
 }
-.modal-header, .modal-header2 {
+.modal-header,
+.modal-header2 {
 	padding: 10px 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	border-bottom: 1px solid rgb(236, 9, 157);
 }
-.modal-header .title, .modal-header2 .title2 {
+.modal-header .title,
+.modal-header2 .title2 {
 	font-size: 1.25rem;
 	font-weight: bold;
 }
-.modal-header .close-button, .modal-header2 .close-button2  {
+.modal-header .close-button,
+.modal-header2 .close-button2 {
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -179,7 +184,8 @@ button:hover {
 	font-size: 2rem;
 	font-weight: bold;
 }
-.modal-body, .modal-body2 {
+.modal-body,
+.modal-body2 {
 	padding: 10px;
 }
 #overlay {
@@ -196,4 +202,32 @@ button:hover {
 #overlay.active {
 	opacity: 1;
 	pointer-events: all;
+}
+.carousel {
+	width: 10vw;
+	height: 10vh;
+	position: relative;
+	margin-top: 5rem;
+}
+.slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+}
+img {
+	height: 200px;
+	width: 200px;
+}
+.imgs {
+	list-style: none;
+}
+.slide > img {
+	display: block;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	object-position: center;
+}
+.slide[data-active] {
+	opacity: 1;
 }
