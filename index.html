@@ -79,6 +79,69 @@
 				</li>
 			</ul>
 		</nav>
+		<div class="modal" id="modal">
+			<div class="modal-header">
+				<div class="title">Warning Modal</div>
+				<button data-close-button class="close-button">&times;</button>
+			</div>
+			<div class="modal-body">
+				This is a warning! Lorem ipsum, dolor sit amet consectetur adipisicing
+				elit. Sit ducimus praesentium provident iusto facere saepe, sunt nemo
+				atque aliquam blanditiis? Lorem ipsum, dolor sit amet consectetur
+				adipisicing elit. Ea, eveniet.
+			</div>
+		</div>
+
+		<div class="modal2" id="modal2">
+			<div class="modal-header2">
+				<div class="title2">Error Modal</div>
+				<button data-close-button2 class="close-button2">&times;</button>
+			</div>
+			<div class="modal-body2">
+				This is an error! Lorem ipsum, dolor sit amet consectetur adipisicing
+				elit. Sit ducimus praesentium provident iusto facere saepe, sunt nemo
+				atque aliquam blanditiis? Lorem ipsum, dolor sit amet consectetur
+				adipisicing elit. Ea, eveniet.
+			</div>
+		</div>
+		<div id="overlay"></div>
+		<div class="frame">
+			<p class="choiceP">Make a choice</p>
+			<button data-modal-target="#modal" class="warning">Show warning</button>
+			<button data-modal-target="#modal2" class="error">Show error</button>
+			<button class="default">Show default</button>
+		</div>
+
+		<section aria-label="Newest photos">
+			<div class="carousel" data-carousel>
+				<button class="carousel-button prev" data-carousel-button="prev">
+					&#8656;
+				</button>
+				<button class="carousel-button next" data-carousel-button="next">
+					&#8658;
+				</button>
+				<ul data-slides>
+					<li class="slide" data-active>
+						<img
+							src="https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+							alt="Pink marble #1"
+						/>
+					</li>
+					<li class="slide">
+						<img
+							src="https://images.unsplash.com/photo-1582794543462-0d7922e50cf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+							alt="Pink flowers #2"
+						/>
+					</li>
+					<li class="slide">
+						<img
+							src="https://images.unsplash.com/photo-1617055407123-3d7130c1f940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+							alt="Pink silk #3"
+						/>
+					</li>
+				</ul>
+			</div>
+		</section>
 		<main>
 			<h1>This is just some text....</h1>
 			<p class="text">
@@ -156,67 +219,6 @@
 				immediate newspaper.
 			</p>
 		</main>
-
-		<div class="modal" id="modal">
-			<div class="modal-header">
-				<div class="title">Warning Modal</div>
-				<button data-close-button class="close-button">&times;</button>
-			</div>
-			<div class="modal-body">
-				This is a warning! Lorem ipsum, dolor sit amet consectetur adipisicing
-				elit. Sit ducimus praesentium provident iusto facere saepe, sunt nemo
-				atque aliquam blanditiis? Lorem ipsum, dolor sit amet consectetur
-				adipisicing elit. Ea, eveniet.
-			</div>
-		</div>
-
-		<div class="modal2" id="modal2">
-			<div class="modal-header2">
-				<div class="title2">Error Modal</div>
-				<button data-close-button2 class="close-button2">&times;</button>
-			</div>
-			<div class="modal-body2">
-				This is an error! Lorem ipsum, dolor sit amet consectetur adipisicing
-				elit. Sit ducimus praesentium provident iusto facere saepe, sunt nemo
-				atque aliquam blanditiis? Lorem ipsum, dolor sit amet consectetur
-				adipisicing elit. Ea, eveniet.
-			</div>
-		</div>
-
-		<div id="overlay"></div>
-		<div class="frame">
-			<p class="choiceP">Make a choice</p>
-			<button data-modal-target="#modal" class="warning">Show warning</button>
-			<button data-modal-target="#modal2" class="error">Show error</button>
-			<button class="default">Show default</button>
-		</div>
-		<section aria-label="Newest photos">
-			<div class="carousel">
-				<button class="carousel-button prev">&#8656</button>
-				<button class="carousel-button next">&#8658</button>
-				<ul class="imgs">
-					<li class="slide">
-						<img
-							src="https://images.unsplash.com/photo-1607457561901-e6ec3a6d16cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-							alt="Pink marble #1"
-						/>
-					</li>
-					<li class="slide">
-						<img
-							src="https://images.unsplash.com/photo-1582794543462-0d7922e50cf5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
-							alt="Pink flowers #2"
-						/>
-					</li>
-
-					<li>
-						<img
-							src=" https://images.unsplash.com/photo-1617055407123-3d7130c1f940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-							alt="Pink silk #2"
-						/>
-					</li>
-				</ul>
-			</div>
-		</section>
 		<script src="script.js"></script>
 		<script>
 			feather.replace();

@@ -3,7 +3,7 @@ const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
 const openModalButtons2 = document.querySelectorAll("[data-modal-target2]");
 const closeModalButtons2 = document.querySelectorAll("[data-close-button2]");
-
+const buttons = document.querySelector("[data-carousel-button]");
 openModalButtons.forEach((button) => {
 	button.addEventListener("click", () => {
 		const modal = document.querySelector(button.dataset.modalTarget);
@@ -33,9 +33,6 @@ function closeModal(modal) {
 	overlay.classList.remove("active");
 }
 
-
-
-
 openModalButtons2.forEach((button2) => {
 	button2.addEventListener("click", () => {
 		const modal2 = document.querySelector(button2.dataset.modalTarget);
@@ -64,3 +61,18 @@ function closeModal2(modal2) {
 	modal2.classList.remove("active");
 	overlay.classList.remove("active");
 }
+
+buttons.forEach((button) => {
+	button.addEventListener("click", () => {
+		const offset = button.dataset.carouselButton === "next" ? 1 : -1;
+		const slides = button
+			.closest("[data-carousel")
+			.querySelector("[data-slides");
+		const activeSlide = slides.querySelector("[data-active]");
+		let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+		if (newIndex < 0) newIndex = slides.children.length - 1;
+		if (newIndex >= slides.children.length) newIndex = 0;
+		slides.childen[newIndex].dataset.active = true;
+		delete activeSlide.dataset.active;
+	});
+});

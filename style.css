@@ -15,6 +15,7 @@
 }
 body {
 	display: flex;
+	flex-wrap: wrap;
 	margin: 0px;
 	padding: 0;
 	font-family: "VT323", monospace;
@@ -36,6 +37,7 @@ main {
 }
 h1 {
 	margin-top: 2rem;
+	margin-right: 2rem;
 }
 .text {
 	margin-top: 2rem;
@@ -104,6 +106,7 @@ h1 {
 }
 
 .frame {
+	margin-left: 9.5rem;
 	margin-top: 5rem;
 	height: 170px;
 	min-width: 250px;
@@ -203,31 +206,65 @@ button:hover {
 	opacity: 1;
 	pointer-events: all;
 }
+
 .carousel {
-	width: 10vw;
-	height: 10vh;
-	position: relative;
+	margin-left: 9.5rem;
 	margin-top: 5rem;
+	position: relative;
+}
+.carousel > ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .slide {
 	position: absolute;
 	inset: 0;
 	opacity: 0;
+	transition: 200ms opacity ease-in-out;
+	transition-delay: 200ms;
 }
-img {
-	height: 200px;
-	width: 200px;
-}
-.imgs {
-	list-style: none;
-}
+
 .slide > img {
+	height: 170px;
 	display: block;
-	width: 100px;
-	height: 100px;
+	min-width: 250px;
+	/* width: 200px;
+	height: 100px; */
 	object-fit: cover;
 	object-position: center;
 }
 .slide[data-active] {
 	opacity: 1;
+	z-index: 1;
+	transition-delay: 0ms;
+}
+
+.carousel-button {
+	position: absolute;
+	z-index: 2;
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	border-radius: 0.25rem;
+	padding: 0 0.5rem;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.carousel-button:hover,
+.carousel-button:focus {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.carousel-button:focus {
+	outline: 1px solid black;
+}
+.carousel-button.prev {
+	left: 0.7rem;
+}
+.carousel-button.next {
+	right: 0.7rem;
 }
