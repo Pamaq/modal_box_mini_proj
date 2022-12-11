@@ -16,7 +16,6 @@
 }
 body {
 	width: 100vw;
-	display: flex;
 	font-family: "VT323", monospace;
 	background-color: var(--bg-base);
 	overflow-x: hidden;
@@ -33,15 +32,21 @@ body::-webkit-scrollbar-thumb {
 	background: var(--additional-accents);
 }
 main {
-	margin-left: 9.5rem;
-	margin-bottom: 2rem;
+	display: flex;
+	flex: 400px;
+	justify-items: center;
+	justify-content: space-between;
+	margin: 4rem 4.5rem 2rem 9.5rem;
 }
-h1 {
-	margin-top: 2rem;
+header {
+	font-size: 3rem;
+	text-align: center;
+	margin: 0.5rem;
 }
+
 .text {
-	margin-top: 2rem;
-	width: max(500px, 50vw);
+	margin-top: auto;
+	width: 30%;
 	/* margin-right: min(100px, 2rem); */
 }
 .navbar {
@@ -107,7 +112,6 @@ h1 {
 
 .frame {
 	margin-left: min(100px, 1rem);
-	margin-top: 5rem;
 	height: 170px;
 	width: 250px;
 	border-radius: 5%;
@@ -211,7 +215,6 @@ button:hover {
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	margin-top: 2rem;
 	margin-left: min(100px, 1rem);
 	height: 400px;
 	width: 400px;
