@@ -35,7 +35,7 @@ main {
 	display: flex;
 	flex: 400px;
 	justify-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 3rem 4.5rem 2rem 9.5rem;
 }
 header {
@@ -153,7 +153,8 @@ button:hover {
 }
 
 .modal,
-.modal2 {
+.modal2,
+.modal3 {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -167,11 +168,13 @@ button:hover {
 	max-width: 60%;
 }
 .modal.active,
-.modal2.active {
+.modal2.active,
+.modal3.active {
 	transform: translate(-50%, -50%) scale(1);
 }
 .modal-header,
-.modal-header2 {
+.modal-header2,
+.modal-header3 {
 	padding: 10px 15px;
 	display: flex;
 	justify-content: space-between;
@@ -179,12 +182,14 @@ button:hover {
 	border-bottom: 1px solid rgb(236, 9, 157);
 }
 .modal-header .title,
-.modal-header2 .title2 {
+.modal-header2 .title2,
+.modal-header3 .title3 {
 	font-size: 1.25rem;
 	font-weight: bold;
 }
 .modal-header .close-button,
-.modal-header2 .close-button2 {
+.modal-header2 .close-button2,
+.modal-header3 .close-button3 {
 	cursor: pointer;
 	border: none;
 	outline: none;
@@ -193,7 +198,8 @@ button:hover {
 	font-weight: bold;
 }
 .modal-body,
-.modal-body2 {
+.modal-body2,
+.modal-body3 {
 	padding: 10px;
 }
 #overlay {

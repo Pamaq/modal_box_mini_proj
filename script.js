@@ -3,6 +3,8 @@ const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
 const openModalButtons2 = document.querySelectorAll("[data-modal-target2]");
 const closeModalButtons2 = document.querySelectorAll("[data-close-button2]");
+const openModalButtons3 = document.querySelectorAll("[data-modal-target3]");
+const closeModalButtons3 = document.querySelectorAll("[data-close-button3]");
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
 openModalButtons.forEach((button) => {
@@ -60,6 +62,35 @@ function openModal2(modal2) {
 function closeModal2(modal2) {
 	if (modal2 == null) return;
 	modal2.classList.remove("active");
+	overlay.classList.remove("active");
+}
+
+openModalButtons3.forEach((button3) => {
+	button3.addEventListener("click", () => {
+		const modal3 = document.querySelector(button3.dataset.modalTarget);
+		openModal3(modal3);
+	});
+});
+
+overlay.addEventListener("click", () => {
+	const modals3 = document.querySelectorAll(".modal3.active");
+	modals3.forEach((modal3) => closeModal(modal3));
+});
+
+closeModalButtons3.forEach((button3) => {
+	button3.addEventListener("click", () => {
+		const modal3 = button3.closest(".modal3");
+		closeModal3(modal3);
+	});
+});
+function openModal3(modal3) {
+	if (modal3 == null) return;
+	modal3.classList.add("active");
+	overlay.classList.add("active");
+}
+function closeModal3(modal3) {
+	if (modal3 == null) return;
+	modal3.classList.remove("active");
 	overlay.classList.remove("active");
 }
 
