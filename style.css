@@ -2,9 +2,9 @@
 	--text-primary: #393434;
 	--text-secondary: #ececec;
 	--bg-base: rgb(161, 197, 238);
-	--bg-primary: rgb(220, 162, 202);
-	--bg-secondary: rgb(221, 102, 183);
-	--additional-accents: rgb(236, 9, 157);
+	--bg-primary: rgb(247, 186, 228);
+	--bg-secondary: rgb(242, 194, 227);
+	--additional-accents: rgba(236, 195, 222, 0.842);
 	--transition-speed: 600ms;
 	font-size: 16px;
 }
@@ -17,7 +17,7 @@
 body {
 	width: 100vw;
 	font-family: "VT323", monospace;
-	background-color: var(--bg-base);
+	background-color: rgb(200, 219, 245);
 	overflow-x: hidden;
 }
 
@@ -280,4 +280,18 @@ button:hover {
 }
 .carousel-button.next {
 	right: 0.5rem;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 4px 4px 12px 0px rgb(92, 87, 87);
+	background-size: cover;
+}
+.grid {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
